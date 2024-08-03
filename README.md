@@ -29,7 +29,7 @@ If you are having connection troubles, make sure to enable the Windows firewall 
 What this patch does not fix
 ----------------------------
 
-While thi patch is active, it does not allow one to host or join internet multiplayer servers. Gameplay is restricted to LAN only while the patch is active. The launcher bat script provides an easy way to switch between playing with the patch enabled or disabled.
+While this patch is active, it does not allow one to host or join internet multiplayer servers. Gameplay is restricted to LAN only while the patch is active. The launcher bat script provides an easy way to switch between playing with the patch enabled or disabled.
 
 However, the same programming/packaging bug still remains with online play: if you try to join a multiplayer game on an internet server, you may get the error "Already Logged In. Retry?" or an error
 
