@@ -3,6 +3,14 @@ GOG Wreckfest LAN fix launcher
 
 This launcher fixes up GOG's botched LAN support for Wreckfest.
 
+<img src='already_logged_in.png'>
+
+Due to a programming/packaging error from GOG's behalf, if multiple people who bought Wreckfest from GOG try to join the same LAN game server, they will get an error "Already Logged In. Retry?"
+
+This is due to GOG assigning the same hardcoded/dummy player ID to all users who play Wreckfest from GOG, when not using GOG Galaxy installer.
+
+To fix this problem and to enable LAN play, this patch randomizes the player ID for each player. It also allows players to enter a custom player name, rather than the game doxxing their Windows PC user name to the public game server.
+
 It is based on DLLs from https://gitlab.com/Mr_Goldberg/goldberg_emulator/-/jobs/4247811310/artifacts/download
 See https://gitlab.com/Mr_Goldberg/goldberg_emulator/blob/master/README.md for more information.
 
@@ -17,3 +25,14 @@ Installation Instructions
 3. Launch the game from `wreckfest_lan_launcher.bat` in the Wreckfest directory.
 
 If you are having connection troubles, make sure to enable the Windows firewall pop-up in the background.
+
+What this patch does not fix
+----------------------------
+
+While thi patch is active, it does not allow one to host or join internet multiplayer servers. Gameplay is restricted to LAN only while the patch is active. The launcher bat script provides an easy way to switch between playing with the patch enabled or disabled.
+
+However, the same programming/packaging bug still remains with online play: if you try to join a multiplayer game on an internet server, you may get the error "Already Logged In. Retry?" or an error
+
+<img src='you_have_been_banned_from_server.png'>
+
+if the hardcoded/dummy player ID happens to have been banned from that server. That is, even if you might never have played on a particular server, the GOG player ID may have already been banned there. This patch does not have the ability to fix this multiplayer problem, but GOG should fix it themselves.
