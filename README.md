@@ -7,7 +7,7 @@ This launcher fixes up GOG's botched LAN support for Wreckfest.
 
 Due to a programming/packaging error from GOG's behalf, if multiple people who bought Wreckfest from GOG try to join the same LAN game server, they will get an error "Already Logged In. Retry?"
 
-This is due to GOG assigning the same hardcoded/dummy player ID to all users who play Wreckfest from GOG, when not using GOG Galaxy installer.
+This is due to GOG assigning the same hardcoded/dummy player ID `99642141755572224` to all users who play Wreckfest from GOG, when not using GOG Galaxy installer.
 
 To fix this problem and to enable LAN play, this patch randomizes the player ID for each player. It also allows players to enter a custom player name, rather than the game doxxing their Windows PC user name to the public game server.
 
@@ -35,7 +35,9 @@ However, the same programming/packaging bug still remains with online play: if y
 
 <img src='you_have_been_banned_from_server.png'>
 
-if the hardcoded/dummy player ID happens to have been banned from that server. That is, even if you might never have played on a particular server, the GOG player ID may have already been banned there. This patch does not have the ability to fix this multiplayer problem, but GOG should fix it themselves.
+if the hardcoded/dummy player ID `99642141755572224` happens to have been banned from that server. That is, even if you might never have played on a particular server, the GOG player ID may have already been banned there. This patch does not have the ability to fix this multiplayer problem, but GOG should fix it themselves.
+
+If you are a Wreckfest game server host, you can alleviate the problem a little bit by verifying that the player ID `99642141755572224` is not banned. There may be hundreds of different players unknowingly playing with that player ID.
 
 Limitations
 -----------
