@@ -36,3 +36,8 @@ However, the same programming/packaging bug still remains with online play: if y
 <img src='you_have_been_banned_from_server.png'>
 
 if the hardcoded/dummy player ID happens to have been banned from that server. That is, even if you might never have played on a particular server, the GOG player ID may have already been banned there. This patch does not have the ability to fix this multiplayer problem, but GOG should fix it themselves.
+
+Limitations
+-----------
+
+It seems that while the patch is active, the game server still needs to authenticate with Wreckfest online DRM (even though GOG states that they would sell DRM free games, sigh..). So this means that the game server does need to have an online internet connection. However, the game clients that join in the game do not need internet connectivity, and all gameplay traffic should flow strictly through LAN.
